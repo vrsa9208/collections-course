@@ -1,10 +1,10 @@
 package com.walmart.development.collections.course.console;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
-import com.walmart.development.collections.course.units.three.Product;
+import com.walmart.development.collections.course.units.four.Unit4;
 
 /**
  * @author vvo0002
@@ -19,10 +19,24 @@ public class Console
   public static void main(String[] args)
   {
     System.out.println("Java Collections");
-    Product door = new Product("Wooden door", 35);
-    Product floorPanel = new Product("Floor panel", 25);
-    Product window = new Product("Glass window", 10);
+    Unit4 unit4 = new Unit4();
+    for(String string : unit4.getHashSet()) {
+      System.out.println(string);
+    }
     
+    List<String> repeatedList = new LinkedList<>();
+    repeatedList.add("uno");
+    repeatedList.add("uno");
+    repeatedList.add("dos");
+    repeatedList.add("dos");
+    repeatedList.add("tres");
+    repeatedList.add("tres");
+    
+    Object o;
+    
+    for(String string : unit4.getHashSet(repeatedList)) {
+      System.out.println(string);
+    }
   }
 
 
